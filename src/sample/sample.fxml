@@ -1,0 +1,23 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ComboBox?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" hgap="100" vgap="10">
+    <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+    <Canvas fx:id="mainCanvas" width="780" height="400" onMouseClicked="#click_canvas"
+            GridPane.columnIndex="0" GridPane.rowIndex="0"  GridPane.columnSpan="3"/>
+    <ComboBox fx:id="figuresComboBox" onAction="#pick_figure"
+              GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+    <Label fx:id="tipLabel" text="Tip: Pick one of the figures to draw!"
+           GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.halignment="LEFT"/>
+    <Button fx:id="drawListButton" text="Draw All Figures" onAction="#click_draw_list"
+            GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.halignment="RIGHT"/>
+    <Button fx:id="clearButton" text="Clear" onAction="#click_clear"
+            GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.halignment="RIGHT"/>
+
+
+</GridPane>
